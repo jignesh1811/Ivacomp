@@ -12,8 +12,33 @@ export const appRoutes: Routes = [
             // },
             {
                 path: '',
-                loadComponent: () => import('@/pages/home/home').then((c) => c.Home) 
+                loadComponent: () => import('@/pages/home/home').then((c) => c.Home)
             },
+            {
+                path: 'productcertification',
+                loadComponent: () => import('@/pages/productcertification/productcertification').then((c) => c.ProductCertification)
+            },
+            {
+                path: 'managementcertification',
+                loadComponent: () => import('@/pages/managementcertification/managementcertification').then((c) => c.ManagementCertification)
+            },
+            {
+                path: 'trainings',
+                loadComponent: () => import('@/pages/trainings/trainings').then((c) => c.Trainings)
+            },
+            {
+                path: 'consultants',
+                loadComponent: () => import('@/pages/consultants/consultants').then((c) => c.Consultants)
+            },
+            {
+                path: 'lobbyist',
+                loadComponent: () => import('@/pages/lobbyist/lobbyist').then((c) => c.Lobbyist)
+            },
+            {
+                path: 'auditors',
+                loadComponent: () => import('@/pages/auditors/auditors').then((c) => c.Auditors)
+            },
+            
             {
                 path: 'dashboard',
                 loadComponent: () => import('@/pages/dashboards/ecommercedashboard').then((c) => c.EcommerceDashboard),

@@ -27,6 +27,7 @@ export class AppMenu {
                 {
                     label: 'Product Certification',
                     icon: 'pi pi-fw pi-home',
+                    routerLink: ['/productcertification']
                     // items: [
                     //     {
                     //         label: 'E-Commerce',
@@ -43,22 +44,27 @@ export class AppMenu {
                 {
                     label: 'Management Certification',
                     icon: 'pi pi-fw pi-home',
+                    routerLink: ['/managementcertification']
                 },
                 {
                     label: 'Trainings',
                     icon: 'pi pi-fw pi-home',
+                    routerLink: ['/trainings']
                 },
                 {
                     label: 'Consultants',
                     icon: 'pi pi-fw pi-home',
+                    routerLink: ['/consultants']
                 },
                 {
                     label: 'Lobbyist',
                     icon: 'pi pi-fw pi-home',
+                    routerLink: ['/lobbyist']
                 },
                 {
                     label: 'Auditors',
                     icon: 'pi pi-fw pi-home',
+                    routerLink: ['/auditors']
                 },
             ]
         },
