@@ -14,277 +14,153 @@ import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { TagModule } from 'primeng/tag';
 import { RippleModule } from 'primeng/ripple';
+import { CardModule } from 'primeng/card';
 
 @Component({
     selector: 'app-ecommerce-dashboard',
-    imports: [ChartModule, TableModule, MenuModule, ButtonModule, InputTextModule, FormsModule, CommonModule, IconFieldModule, InputIconModule, TagModule, RippleModule],
-    template: `
-        <div class="grid grid-cols-12 gap-8">
-            <div class="col-span-12 md:col-span-6 lg:col-span-3">
-                <div class="p-4 text-white h-24 rounded-border m-0 bg-center bg-cover bg-no-repeat bg-cyan-400" style="background-image: url('/demo/images/dashboard/effect-1.svg')">
-                    <div class="font-bold w-full mb-2">
-                        <span>Sales</span>
-                    </div>
-                    <div class="text-white text-2xl font-bold w-full flex items-center py-1">150 <i class="pi pi-arrow-up ml-2 font-bold"></i></div>
+    imports: [ChartModule, TableModule, MenuModule, ButtonModule, InputTextModule, FormsModule, CommonModule, IconFieldModule, InputIconModule, TagModule, RippleModule, CardModule],
+    //templateUrl: './ecommercedashboard.html', 
+    template : `<div class="text-xl font-semibold">Admin Dashboard</div>
+<div class="text-gray-500 text-sm">Welcome Back! Here's an overview of all your systems.</div> <br />
+<div class="grid grid-cols-12 gap-8">
+    <div class="col-span-12 md:col-span-6 lg:col-span-3">
+        <div class="p-4 text-white h-24 rounded-border m-0 bg-center bg-cover bg-no-repeat bg-cyan-400"
+            style="background-image: url('/demo/images/dashboard/effect-1.svg')">
+            <div class="font-bold w-full mb-2">
+                <span>Total Users</span>
+            </div>
+            <div class="text-white text-2xl font-bold w-full flex items-center py-1">150 <i
+                    class="pi pi-arrow-up ml-2 font-bold"></i></div>
+        </div>
+    </div>
+    <div class="col-span-12 md:col-span-6 lg:col-span-3">
+        <div class="p-4 text-white h-24 rounded-border m-0 bg-center bg-cover bg-no-repeat bg-orange-400"
+            style="background-image: url('/demo/images/dashboard/effect-2.svg')">
+            <div class="font-bold w-full mb-2">
+                <span>Active Queries</span>
+            </div>
+            <div class="text-white text-2xl font-bold w-full flex items-center py-1">532 <i
+                    class="pi pi-arrow-up ml-2 font-bold"></i></div>
+        </div>
+    </div>
+    <div class="col-span-12 md:col-span-6 lg:col-span-3">
+        <div class="p-4 text-white h-24 rounded-border m-0 bg-center bg-cover bg-no-repeat bg-purple-400"
+            style="background-image: url('/demo/images/dashboard/effect-3.svg')">
+            <div class="font-bold w-full mb-2">
+                <span>Certification</span>
+            </div>
+            <div class="text-white text-2xl font-bold w-full flex items-center py-1">450 <i
+                    class="pi pi-arrow-down ml-2 font-bold"></i></div>
+        </div>
+    </div>
+    <div class="col-span-12 md:col-span-6 lg:col-span-3">
+        <div class="p-4 text-white h-24 rounded-border m-0 bg-center bg-cover bg-no-repeat bg-slate-400"
+            style="background-image: url('/demo/images/dashboard/effect-4.svg')">
+            <div class="font-bold w-full mb-2">
+                <span>Audit Completed</span>
+            </div>
+            <div class="text-white text-2xl font-bold w-full flex items-center py-1">143 <i
+                    class="pi pi-arrow-down ml-2 font-bold"></i></div>
+        </div>
+    </div>
+
+    <div class="col-span-12 lg:col-span-6">
+        <div class="card ">
+            <div class="flex items-center justify-between mb-6">
+                <h2><b>Query Management</b></h2>
+                <div class="ml-auto">
+                    <a href="#" class="text-blue-600 text-sm font-medium hover:underline">View All →</a>
                 </div>
             </div>
-            <div class="col-span-12 md:col-span-6 lg:col-span-3">
-                <div class="p-4 text-white h-24 rounded-border m-0 bg-center bg-cover bg-no-repeat bg-orange-400" style="background-image: url('/demo/images/dashboard/effect-2.svg')">
-                    <div class="font-bold w-full mb-2">
-                        <span>Revenue</span>
+            <div class="flex items-center justify-between card">
+                <div class="flex w-7/12 items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="font-medium">Regulation Compliance</span>
+                        <span class="text-muted-color">Submitted by : Alex Johnson</span>
                     </div>
-                    <div class="text-white text-2xl font-bold w-full flex items-center py-1">532 <i class="pi pi-arrow-up ml-2 font-bold"></i></div>
+                </div>
+                <div class="w-5/12 flex justify-end">
+                    <p-button label="Pending" severity="warn" text />
                 </div>
             </div>
-            <div class="col-span-12 md:col-span-6 lg:col-span-3">
-                <div class="p-4 text-white h-24 rounded-border m-0 bg-center bg-cover bg-no-repeat bg-purple-400" style="background-image: url('/demo/images/dashboard/effect-3.svg')">
-                    <div class="font-bold w-full mb-2">
-                        <span>New Customers</span>
+            <div class="flex items-center justify-between card">
+                <div class="flex w-7/12 items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="font-medium">Certiifcate Renewal</span>
+                        <span class="text-muted-color">Submitted by : Sarah Miller</span>
                     </div>
-                    <div class="text-white text-2xl font-bold w-full flex items-center py-1">450 <i class="pi pi-arrow-down ml-2 font-bold"></i></div>
+                </div>
+                <div class="w-5/12 flex justify-end">
+                    <p-button label="Resolved" severity="success" text />
                 </div>
             </div>
-            <div class="col-span-12 md:col-span-6 lg:col-span-3">
-                <div class="p-4 text-white h-24 rounded-border m-0 bg-center bg-cover bg-no-repeat bg-slate-400" style="background-image: url('/demo/images/dashboard/effect-4.svg')">
-                    <div class="font-bold w-full mb-2">
-                        <span>Stock</span>
+            <div class="flex items-center justify-between card">
+                <div class="flex w-7/12 items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="font-medium">Testing Procedure</span>
+                        <span class="text-muted-color">Submitted by : David Wang</span>
                     </div>
-                    <div class="text-white text-2xl font-bold w-full flex items-center py-1">143 <i class="pi pi-arrow-down ml-2 font-bold"></i></div>
+                </div>
+                <div class="w-5/12 flex justify-end">
+                    <p-button label="Urgent" severity="danger" text />
                 </div>
             </div>
 
             <div class="col-span-12 lg:col-span-6">
-                <div class="card h-full">
-                    <h5>Weekly Overview</h5>
-                    <p-chart type="line" [data]="chartData" [options]="chartOptions" id="nasdaq-chart" [responsive]="true"></p-chart>
-                </div>
-            </div>
-
-            <div class="col-span-12 lg:col-span-6">
-                <div class="card">
-                    <div class="flex items-center justify-between mb-6">
-                        <h5>Quarter Goals</h5>
-                        <div class="ml-auto">
-                            <button pButton pRipple icon="pi pi-ellipsis-v" class="p-button-text p-button-plain p-button-rounded" (click)="menu.toggle($event)"></button>
-                            <p-menu #menu [popup]="true" [model]="items"></p-menu>
-                        </div>
-                    </div>
-                    <div class="border border-surface p-4 mb-6">
-                        <span class="font-medium text-3xl text-color">85% <span class="text-muted-color">(2125/2500)</span></span>
-                        <ul class="m-0 p-0 list-none mt-4 flex">
-                            <li class="bg-cyan-500 h-4 flex-1 rounded-l"></li>
-                            <li class="bg-orange-500 h-4 flex-1"></li>
-                            <li class="bg-pink-500 h-4 flex-1"></li>
-                            <li class="bg-purple-500 h-4 flex-1"></li>
-                            <li class="bg-blue-500 h-4 flex-1"></li>
-                            <li class="bg-gray-500 h-4 flex-1 rounded-r"></li>
-                        </ul>
-                    </div>
-
-                    <ul class="mt-6 p-0 mx-0">
-                        <li class="flex items-center py-4">
-                            <span class="rounded-border bg-cyan-500 mr-4 w-4 h-4"></span>
-                            <span class="text-xl font-medium text-color">T-Shirt</span>
-                            <span class="text-xl font-medium text-muted-color ml-auto">89</span>
-                        </li>
-                        <li class="flex items-center py-4">
-                            <span class="rounded-md bg-orange-500 mr-4 w-4 h-4"></span>
-                            <span class="text-xl font-medium text-color">Controller</span>
-                            <span class="text-xl font-medium text-muted-color ml-auto">23</span>
-                        </li>
-                        <li class="flex items-center py-4">
-                            <span class="rounded-md bg-pink-500 mr-4 w-4 h-4"></span>
-                            <span class="text-xl font-medium text-color">Phone Case</span>
-                            <span class="text-xl font-medium text-muted-color ml-auto">134</span>
-                        </li>
-                        <li class="flex items-center py-4">
-                            <span class="rounded-md bg-purple-500 mr-4 w-4 h-4"></span>
-                            <span class="text-xl font-medium text-color">Purple Band</span>
-                            <span class="text-xl font-medium text-muted-color ml-auto">42</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-span-12 lg:col-span-4">
-                <div class="card">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <span class="font-bold text-3xl text-color">450</span>
-                            <p class="mt-2 mb-0 text-2xl text-muted-color">Reviews Received</p>
-                        </div>
-                        <div>
-                            <img src="/demo/images/dashboard/stats-illustration-1.svg" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-span-12 lg:col-span-4">
-                <div class="card">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <span class="font-bold text-3xl text-color">71K</span>
-                            <p class="mt-2 mb-0 text-2xl text-muted-color">Unique Visitors</p>
-                        </div>
-                        <div>
-                            <img src="/demo/images/dashboard/stats-illustration-2.svg" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-span-12 lg:col-span-4">
-                <div class="card">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <span class="font-bold text-3xl text-color">757</span>
-                            <p class="mt-2 mb-0 text-2xl text-muted-color">Payments Processed</p>
-                        </div>
-                        <div>
-                            <img src="/demo/images/dashboard/stats-illustration-3.svg" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-span-12 xl:col-span-6">
-                <div class="card p-6">
-                    <div class="flex items-center justify-between mb-6">
-                        <h5>Product Sales</h5>
-                        <button pButton pRipple icon="pi pi-refresh" rounded outlined></button>
-                    </div>
-
-                    <div class="grid grid-cols-12 gap-4 mr-0">
-                        <div class="col-span-6 md:col-span-4 lg:col-span-3 p-4">
-                            <div class="text-center">
-                                <div class="flex items-center justify-center mb-4 mx-auto bg-surface-0 dark:bg-surface-950 border border-surface rounded-border" style="width: 90px; height: 90px">
-                                    <img src="/demo/images/dashboard/headphone.png" style="width: 48px; height: 48px" />
-                                </div>
-                                <span class="font-medium text-color">Headphone</span>
-                                <div class="text-sm text-muted-color mt-2">220 Sales</div>
-                            </div>
-                        </div>
-                        <div class="col-span-6 md:col-span-4 lg:col-span-3 p-4">
-                            <div class="text-center">
-                                <div class="flex items-center justify-center mb-4 mx-auto bg-surface-0 dark:bg-surface-950 border border-surface rounded-border" style="width: 90px; height: 90px">
-                                    <img src="/demo/images/dashboard/laptop.png" style="width: 48px; height: 48px" />
-                                </div>
-                                <span class="font-medium text-color">Laptop</span>
-                                <div class="text-sm text-muted-color mt-2">110 Sales</div>
-                            </div>
-                        </div>
-                        <div class="col-span-6 md:col-span-4 lg:col-span-3 p-4">
-                            <div class="text-center">
-                                <div class="flex items-center justify-center mb-4 mx-auto bg-surface-0 dark:bg-surface-950 border border-surface rounded-border" style="width: 90px; height: 90px">
-                                    <img src="/demo/images/dashboard/phone.png" style="width: 48px; height: 48px" />
-                                </div>
-                                <span class="font-medium text-color">Phone</span>
-                                <div class="text-sm text-muted-color mt-2">90 Sales</div>
-                            </div>
-                        </div>
-                        <div class="col-span-6 md:col-span-4 lg:col-span-3 p-4">
-                            <div class="text-center">
-                                <div class="flex items-center justify-center mb-4 mx-auto bg-surface-0 dark:bg-surface-950 border border-surface rounded-border" style="width: 90px; height: 90px">
-                                    <img src="/demo/images/dashboard/shoes.png" style="width: 48px; height: 48px" />
-                                </div>
-                                <span class="font-medium text-color">Shoes</span>
-                                <div class="text-sm text-muted-color mt-2">77 Sales</div>
-                            </div>
-                        </div>
-                        <div class="col-span-6 md:col-span-4 lg:col-span-3 p-4">
-                            <div class="text-center">
-                                <div class="flex items-center justify-center mb-4 mx-auto bg-surface-0 dark:bg-surface-950 border border-surface rounded-border" style="width: 90px; height: 90px">
-                                    <img src="/demo/images/dashboard/tshirt.png" style="width: 48px; height: 48px" />
-                                </div>
-                                <span class="font-medium text-color">Tshirt</span>
-                                <div class="text-sm text-muted-color mt-2">454 Sales</div>
-                            </div>
-                        </div>
-                        <div class="col-span-6 md:col-span-4 lg:col-span-3 p-4">
-                            <div class="text-center">
-                                <div class="flex items-center justify-center mb-4 mx-auto bg-surface-0 dark:bg-surface-950 border border-surface rounded-border" style="width: 90px; height: 90px">
-                                    <img src="/demo/images/dashboard/vacuum.png" style="width: 48px; height: 48px" />
-                                </div>
-                                <span class="font-medium text-color">Vacuum</span>
-                                <div class="text-sm text-muted-color mt-2">330 Sales</div>
-                            </div>
-                        </div>
-                        <div class="col-span-6 md:col-span-4 lg:col-span-3 p-4">
-                            <div class="text-center">
-                                <div class="flex items-center justify-center mb-4 mx-auto bg-surface-0 dark:bg-surface-950 border border-surface rounded-border" style="width: 90px; height: 90px">
-                                    <img src="/demo/images/dashboard/wallet.png" style="width: 48px; height: 48px" />
-                                </div>
-                                <span class="font-medium text-color">Wallet</span>
-                                <div class="text-sm text-muted-color mt-2">42 Sales</div>
-                            </div>
-                        </div>
-                        <div class="col-span-6 md:col-span-4 lg:col-span-3 p-4">
-                            <div class="text-center">
-                                <div class="flex items-center justify-center mb-4 mx-auto bg-surface-0 dark:bg-surface-950 border border-surface rounded-border" style="width: 90px; height: 90px">
-                                    <img src="/demo/images/dashboard/watch.png" style="width: 48px; height: 48px" />
-                                </div>
-                                <span class="font-medium text-color">Watch</span>
-                                <div class="text-sm text-muted-color mt-2">112 Sales</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-span-12 xl:col-span-6">
-                <div class="card">
-                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                        <div class="text-surface-900 dark:text-surface-0 text-xl font-semibold mb-4 md:mb-0">Recent Sales</div>
-                        <div class="inline-flex items-center">
-                            <p-iconfield class="flex-auto">
-                                <p-inputicon class="pi pi-search" />
-                                <input pInputText type="text" (input)="onGlobalFilter(dt, $event)" placeholder="Search" class="w-full" style="border-radius: 2rem" />
-                            </p-iconfield>
-                            <button pButton pRipple icon="pi pi-upload" class="mx-4 export-target-button" rounded (click)="dt.exportCSV()"></button>
-                        </div>
-                    </div>
-                    <p-table #dt [value]="products" [columns]="cols" [paginator]="true" [rows]="6" responsiveLayout="scroll" [globalFilterFields]="['name', 'category', 'inventoryStatus']">
-                        <ng-template pTemplate="header">
-                            <tr>
-                                <th pSortableColumn="name" style="min-width:12rem" class="white-space-nowrap">
-                                    Name
-                                    <p-sortIcon field="name"></p-sortIcon>
-                                </th>
-                                <th pSortableColumn="category" style="min-width:10rem" class="white-space-nowrap">
-                                    Category
-                                    <p-sortIcon field="category"></p-sortIcon>
-                                </th>
-                                <th pSortableColumn="price" style="min-width:10rem" class="white-space-nowrap">
-                                    Price
-                                    <p-sortIcon field="price"></p-sortIcon>
-                                </th>
-                                <th pSortableColumn="inventoryStatus" style="min-width:10rem" class="white-space-nowrap">
-                                    Status
-                                    <p-sortIcon field="inventoryStatus"></p-sortIcon>
-                                </th>
-                                <th></th>
-                            </tr>
-                        </ng-template>
-                        <ng-template pTemplate="body" let-product>
-                            <tr>
-                                <td>{{ product.name }}</td>
-                                <td>
-                                    {{ product.category }}
-                                </td>
-                                <td>
-                                    {{ product.price | currency: 'USD' }}
-                                </td>
-                                <td>
-                                    <p-tag [severity]="getBadgeSeverity(product)">{{ product.inventoryStatus }}</p-tag>
-                                </td>
-                            </tr>
-                        </ng-template>
-                    </p-table>
-                </div>
+                <p-button label="Manage Queries" outlined styleClass="w-full" />
             </div>
         </div>
-    `,
+    </div>
+
+    <div class="col-span-12 lg:col-span-6">
+        <div class="card ">
+            <div class="flex items-center justify-between mb-6">
+                 <h2><b>Regulation Updates</b></h2>
+                <div class="ml-auto">
+                    <a href="#" class="text-blue-600 text-sm font-medium hover:underline">View All →</a>
+                </div>
+            </div>
+            <div class="flex items-center justify-between card">
+                <div class="flex w-7/12 items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="font-medium">ISO 27001:2025 Update</span>
+                        <span class="text-muted-color">New security controls for cloud.</span>
+                    </div>
+                </div>
+                <div class="w-5/12 flex justify-end">
+                    <span class="text-muted-color"> May 12, 2025 </span>
+                </div>
+            </div>
+            <div class="flex items-center justify-between card">
+                <div class="flex w-7/12 items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="font-medium">GDPR Amendment</span>
+                        <span class="text-muted-color">Updated data processing</span>
+                    </div>
+                </div>
+                <div class="w-5/12 flex justify-end">
+                    <span class="text-muted-color"> April 11, 2025 </span>
+                </div>
+            </div>
+            <div class="flex items-center justify-between card">
+                <div class="flex w-7/12 items-center justify-between">
+                    <div class="flex flex-col">
+                        <span class="font-medium">FDA Regulation 21 CFR Part 11</span>
+                        <span class="text-muted-color">Electronic records compliance</span>
+                    </div>
+                </div>
+                <div class="w-5/12 flex justify-end">
+                    <span class="text-muted-color"> March 11, 2025 </span>
+                </div>
+            </div>
+
+            <div class="col-span-12 lg:col-span-6">
+                <p-button label="View Regulations" outlined styleClass="w-full" />
+            </div>
+        </div>
+    </div>
+
+</div>`,
     providers: [ProductService]
 })
 export class EcommerceDashboard {
@@ -304,6 +180,21 @@ export class EcommerceDashboard {
 
     @ViewChild('chatcontainer') chatContainerViewChild!: ElementRef;
 
+    queries = [
+        { title: 'Regulation Compliance', submitter: 'Alex Johnson', status: 'Pending' },
+        { title: 'Certificate Renewal', submitter: 'Sarah Miller', status: 'Resolved' },
+        { title: 'Testing Procedure', submitter: 'David Wong', status: 'Urgent' }
+    ];
+
+    regulations = [
+        { title: 'ISO 27001:2025 Update', description: 'New security controls...', date: 'May 12, 2025' },
+        { title: 'GDPR Amendment', description: 'Updated data processing...', date: 'Apr 28, 2025' },
+        { title: 'FDA Regulation 21 CFR Part 11', description: 'Electronic records...', date: 'Apr 15, 2025' }
+    ];
+
+
+
+
     constructor(private productService: ProductService) {
         this.subscription = this.layoutService.configUpdate$.pipe(debounceTime(50)).subscribe((config) => {
             this.chartInit();
@@ -322,7 +213,13 @@ export class EcommerceDashboard {
 
         this.chartInit();
     }
-
+    statusClass(status: string): string {
+        return {
+            'Pending': 'bg-yellow-100 text-yellow-800',
+            'Resolved': 'bg-green-100 text-green-800',
+            'Urgent': 'bg-red-100 text-red-800'
+        }[status] || 'bg-gray-100 text-gray-800';
+    }
     chartInit() {
         const textColor = getComputedStyle(document.body).getPropertyValue('--text-color') || 'rgba(0, 0, 0, 0.87)';
         const surfaceBorder = getComputedStyle(document.body).getPropertyValue('--surface-border');
