@@ -41,10 +41,10 @@ import { RippleModule } from 'primeng/ripple';
         <div class="layout-topbar-end">
             <div class="layout-topbar-actions-end">
                 <ul class="layout-topbar-items">
-                    <li class="layout-topbar-search">
-                       <p-button label="Login" [routerLink]="['/auth/login2']"/>
+                    <li class="layout-topbar-search" style="display: inline-block;">
+                       <p-button label="Login" [routerLink]="['/auth/login2']" />
                     </li>
-                    <li class="layout-topbar-search">
+                    <li class="layout-topbar-search" style="display: inline-block;">
                        <p-button label="Register" />
                     </li>
                     
